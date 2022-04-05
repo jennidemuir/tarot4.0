@@ -1,0 +1,70 @@
+.cardFilterMain {
+
+  margin: .65rem 2rem 2rem 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+.cardFilterMain div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  height: 200px;
+  width: 150px;
+  padding: .30rem 0;
+  margin: .25rem 0;
+
+
+}
+
+.cardFilterContainer {
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  box-shadow: 0 4px 8px 0 rgba(65, 41, 41, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.cardFilterContainer:hover {
+  background-color: rgba(100, 245, 250, 0.267);
+}
+
+.cardFilterContainer:active {
+  transform: scale(0.98);
+}
+
+
+.cardFilterBackground {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+#arcana {
+  background-image: url("https://www.trustedtarot.com/img/cards/wheel-of-fortune.png");
+}
+
+#cup {
+  background-image: url("https://www.trustedtarot.com/img/cards/ace-of-cups.png");
+}
+
+#sword {
+  background-image: url("https://www.trustedtarot.com/img/cards/ace-of-swords.png");
+}
+
+#wand {
+  background-image: url("https://www.trustedtarot.com/img/cards/ace-of-wands.png");
+}
+
+#pentacle {
+  background-image: url("https://www.trustedtarot.com/img/cards/ace-of-pentacles.png");
+}
+
+#all {
+  background-image: url(https://www.trustedtarot.com/img/cards/the-world.png);
+}
+
+@media screen and (max-width: 600px) {
+}

@@ -1,0 +1,22 @@
+.tarotCardMain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+
+  width: 350px;
+  padding: 2rem;
+}
+
+.tarotCardMain img {
+  width: auto;
+}
+
+.tarotCardMain p {
+  font-family: "Roboto", sans-serif;
+}
+
+.descriptions {
+  display: flex;
+  flex-direction: column;
+}

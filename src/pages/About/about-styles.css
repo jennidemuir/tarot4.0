@@ -1,0 +1,46 @@
+
+.aboutContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+}
+
+.headShot {
+    max-width: 300px;
+    border-radius: 50%;
+}
+
+.aboutBio {
+    display: flex;
+    flex-direction: column;
+    padding-top: 25px ;
+}
+
+.aboutBio h1 {
+    font-size: larger;
+    font-weight: 700;
+}
+
+.aboutLinks {
+    width: 100vw;
+ display: flex;
+ justify-content: space-evenly;
+ flex-wrap: wrap;
+}
+
+.aboutImgContainer{
+max-width: 300px;
+margin: 20px 25px;
+}
+
+.aboutImg {
+    float: left;
+    width:  300px;
+    height: 300px;
+    object-fit: cover
+
+}

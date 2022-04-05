@@ -1,0 +1,158 @@
+.cardReaderMain {
+  width:100vw;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.reader-btns{
+  width: 100vw;
+ display: flex;
+ justify-content: center;
+ padding-bottom: 15px;
+}
+
+.reader-btn:disabled{
+  border: 1px solid #999999;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.new-btn-container {
+  margin-right:50px;
+}
+
+.save-btn-container {
+  margin-left:50px
+}
+
+
+.reader-btn {
+  width: 75px;
+  margin: 10px auto;
+  border-radius: 5%;
+  padding: 0.42rem;
+  text-align: center;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  background-color:rgba(71, 61, 139, 0.795);
+  color: white;
+}
+
+.reader-btn:hover {
+  transform: scale(0.9);
+}
+
+
+.pickedMain {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  justify-content: center;
+  grid-column: 1/-1;
+}
+
+.pickedContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.pickedImage {
+  background-color: rgb(250, 236, 218);
+  width: 125px;
+  margin: auto;
+  padding: 5px;
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  box-shadow: 0 4px 8px 0 rgba(65, 41, 41, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.pickedImage:hover {
+  transform: scale(0.98);
+}
+
+.readingContainer {
+  min-height: 450px;
+
+  margin: 3rem;
+
+  padding-left: 25px;
+  padding-bottom: 100px;
+  display: grid;
+  grid-template-columns: 2fr 13fr;
+  justify-content: space-between;
+  margin:auto;
+}
+.reading {
+
+  grid-column: 2;
+  grid-row: 2/-1;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  text-align: center;
+}
+
+.readingEl {
+
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.15rem;
+}
+
+#activeImg {
+
+
+  max-width: 420px;
+}
+
+#cardMeaning {
+  width: 95%;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  letter-spacing: 0.35rem;
+  align-self: end;
+  text-align: center;
+  margin: auto;
+  padding-top: 25px;
+}
+
+#cardTitle {
+  letter-spacing: 0.75rem;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 20px auto;
+}
+
+#cardShort {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+#cardLong {
+  font-weight: 700;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+@media screen and (max-width: 875px) {
+
+  .pickedImage {
+    width: 90px;
+  }
+
+  #cardMeaning {
+    grid-column: 1/-1;
+  }
+  #activeImg {
+    width: 150px;
+    align-self: start;
+    margin: 75px 0;
+  }
+}

@@ -1,0 +1,87 @@
+.profileContainer {
+  width: 100vw;
+  height: auto;
+  display: flex;
+
+}
+
+  @media screen and (min-width: 900px) {
+    .profileContainer{
+      flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    }
+  }
+
+
+.emptyCollections{
+  text-align: center;
+}
+
+.dataContainer {
+    display: flex;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.cardSpreadContainer {
+   margin: 35px;
+   margin-left: 0;
+   padding-right: 100px;
+  display: inline-flex;
+
+}
+
+.cardSpread {
+  margin: auto 20px;
+  height: 200px;
+}
+
+
+.cardSpreadImg {
+  position: absolute;
+  height: 200px;
+}
+
+.noteContainer {
+    max-width: 600px;
+    min-width: 200px;
+    margin: 25px;
+    border: 2px solid black;
+}
+
+.noteContainer h2 {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.noteContainer p {
+  margin-left: 10px;
+}
+
+.buttonContainer {
+    display: flex;
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.editDeleteContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 35px;
+}
+
+.editButton {
+  margin: 10px;
+}
+
+.viewButton{
+  margin: 10px;
+  /* font-size: 11px; */
+}
+
+.deleteButton{
+
+  margin: 10px;
+}

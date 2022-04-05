@@ -1,18 +1,43 @@
-import { Heading, Container, Badge } from '@chakra-ui/react'
-import React, {useState} from 'react'
-import { Layout } from '../components/Layout'
-import Navlink from '../components/Navlink';
-import TarotSpread from '../components/TarotSpread/TarotSpread'
+import React, { useState, useEffect } from "react";
+import TarotCardReader from "../../components/TarotCardReader/TarotCardReader";
+import TarotCardPicker from "../../components/TarotCardPicker/TarotCardPicker";
+import tarotCards from "../../assets/tarotCardDB.json";
 
-export default function ProtectedPage({setViewClick, cards}) {
+const TarotReading = () => {
+  const allCards = tarotCards;
+  const [cards, setCards] = useState([]);
+  const [clicked, setClicked] = useState(false);
   const [cardShort, setCardShort] = useState("");
   const [cardLong, setCardLong] = useState("");
   const [cardTitle, setCardTitle] = useState("");
   const [cardMeaning, setCardMeaning] = useState("");
   const [image, setImage] = useState("");
+  const [nums, setNums] = useState([]);
   const [backgroundColor, setBackgroundColor] = useState("white");
   const [read, setRead] = useState(false);
 
+  //Randomizes the cards on display in CardPicker
+
+  useEffect(() => {
+    let newSet = new Set();
+    while (newSet.size !== 77) {
+      newSet.add(Math.floor(Math.random() * 77) + 1);
+    }
+    return setNums([...newSet]);
+  }, [nums]);
+
+  // function for CardPicker to select 5 cards for reading
+  const handleCardClick = (e) => {
+    let data = allCards;
+    let num = nums.pop();
+    let card = data.find((el) => el.id - 1 === num);
+
+    if (cards.length <= 4 && e.target.checked === false) {
+      e.target.src = card.img;
+      e.target.checked = true;
+      setCards([...cards, card]);
+    }
+  };
 
   // function for CardReader to reveal the 5 cards info individually
   const handleClickReveal = (e) => {
@@ -77,31 +102,36 @@ export default function ProtectedPage({setViewClick, cards}) {
     }
   };
 
+  const handleBtnClick = () => {
+    setClicked(
+       !clicked,
+    );
+  };
 
   return (
-    <Layout>
-      <div className="btn-container">
-        <button
-          className="reader-btn"
-          type="button"
-          id="newReadingBtn"
-          onClick={() => setViewClick(false)}
-        >
-          back
-        </button>
-      </div>
-      <TarotSpread
-        cards={cards}
-        bgColor={backgroundColor}
-        cardShort={cardShort}
-        cardLong={cardLong}
-        cardTitle={cardTitle}
-        cardMeaning={cardMeaning}
-        img={image}
-        handleClickReveal={handleClickReveal}
-
-        read={read}
-      />
-    </Layout>
+    <div className="tarotReadingMain">
+      {clicked ? (
+        <TarotCardReader
+          cards={cards}
+          bgColor={backgroundColor}
+          cardShort={cardShort}
+          cardLong={cardLong}
+          cardTitle={cardTitle}
+          cardMeaning={cardMeaning}
+          image={image}
+          handleClickReveal={handleClickReveal}
+          handleBtnClick={handleBtnClick}
+          read={read}
+        />
+      ) : (
+        <TarotCardPicker
+          cards={cards}
+          handleCardClick={handleCardClick}
+          handleBtnClick={handleBtnClick}
+        />
+      )}
+    </div>
   );
-}
+};
+
+export default TarotReading;

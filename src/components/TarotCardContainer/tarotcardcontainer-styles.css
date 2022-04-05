@@ -1,0 +1,9 @@
+.tarotCardContainerMain {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  left: 0;
+  right: 0;
+  max-width: 100%;
+  margin: .5rem auto 2rem auto;
+}

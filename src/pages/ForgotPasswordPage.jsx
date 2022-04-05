@@ -14,9 +14,13 @@ import { useHistory } from 'react-router-dom'
 import { Card } from '../components/Card'
 import DividerWithText from '../components/DividerWithText'
 import { Layout } from '../components/Layout'
+import { useAuth } from '../context/AuthContext'
 
 export default function ForgotPasswordPage() {
   const history = useHistory()
+  const [email, setEmail] = useState('')
+  const {forgotPassword} = useAuth()
+  const toast = useToast()
 
   return (
     <Layout>
@@ -28,12 +32,30 @@ export default function ForgotPasswordPage() {
           onSubmit={async e => {
             e.preventDefault()
             // your forgot password logic here
+            forgotPassword(email)
+            .then(resp => {
+              
+              toast({
+                description: "Check your email",
+                status: "success",
+                duration: 5000,
+                isClosable: true,
+              });
+            }).catch(e => {
+
+              toast({
+                description:e.message,
+                status: "error",
+                duration: 5000,
+                isClosable: true,
+              });
+            })
           }}
         >
           <Stack spacing='6'>
             <FormControl id='email'>
               <FormLabel>Email address</FormLabel>
-              <Input name='email' type='email' autoComplete='email' required />
+              <Input value={email} onChange={e => setEmail(e.target.value)} name='email' type='email' autoComplete='email' required />
             </FormControl>
             <Button type='submit' colorScheme='primary' size='lg' fontSize='md'>
               Submit

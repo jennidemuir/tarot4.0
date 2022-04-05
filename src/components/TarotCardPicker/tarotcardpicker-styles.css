@@ -1,0 +1,109 @@
+.tarotCardPicker {
+  height: 80vh;
+  width: 100vw;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 2fr 0.75fr 4fr 1fr 1.75fr;
+  grid-template-rows: 1fr 6fr;
+}
+
+.cardPickerTitle {
+  grid-column: 3;
+  grid-row: 1;
+  /* color: rgb(248, 184, 132);
+  text-shadow: 2px 2px darkblue; */
+  font-weight: 800;
+  font-size: 2.5rem;
+  padding-left: 10px;
+  /* margin: 0; */
+
+  text-transform: uppercase;
+  letter-spacing: 1.5rem;
+}
+.five {
+  font-size: 3rem;
+  /* color: rgb(235, 90, 32); */
+  text-align: center;
+}
+
+.pickerBtn {
+  /* position: absolute;
+  right: 2%;
+  top: -7%; */
+  grid-column: 4;
+  grid-row: 1;
+  border-radius: 5%;
+  box-shadow: 3px 2px darkslateblue;
+  /* align-content: center;
+  justify-content: center; */
+  width: auto;
+  margin: auto;
+  padding: .5rem;
+  animation: pulse 5s ease-in-out, fadeIn 0.15s;
+  animation-fill-mode: forwards;
+  visibility: hidden;
+  /* background-color: cyan;
+  color: white; */
+  text-align: center;
+  border: none;
+  background-color: inherit;
+
+  cursor: pointer;
+  display: block;
+}
+
+.pickerBtn:hover {
+  transform: scale(0.98);
+}
+.pickerBtn:focus {
+  outline: 0;
+}
+
+/* .empty {
+  grid-column: 2;
+  position: relative;
+
+  padding: 15px;
+  margin-bottom: 35px;
+} */
+
+.picker {
+  grid-column: 2/-1;
+  grid-row: 2/-1;
+  /* padding: 0 0 0 3%; */
+  justify-content: end;
+}
+
+
+@keyframes pulse {
+  0% {
+    background-color: rgb(6, 90, 247);
+  }
+  50% {
+    background-color: rgb(228, 64, 97);
+  }
+  100% {
+    background-color: rgb(157, 78, 231);
+  }
+}
+
+@keyframes fadeIn {
+  90% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes vibe {
+  0% {
+    background-color: rgb(157, 78, 231);
+  }
+  50% {
+    background-color: rgb(6, 90, 247);
+  }
+  100% {
+    background-color: rgb(228, 64, 97);
+  }
+}

@@ -1,0 +1,20 @@
+.homepage {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  padding-top: 3rem;
+  cursor: pointer;
+}
+
+.home-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

@@ -1,0 +1,29 @@
+.footerContainer {
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color:white;
+  color: black;
+  text-align: center;
+}
+
+.learnMore {
+    display: flex;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.footerImg {
+    margin-left: 1rem;
+    width: 50px;
+}
+
+.smallText{
+    font-size: x-small;
+}
+
+.linkedinIcon {
+    margin-right: 1rem;
+}

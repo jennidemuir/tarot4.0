@@ -1,8 +1,14 @@
 import React from 'react'
-import AppRouter from './components/AppRouter'
+import AppRouter from './components/AppRouter/AppRouter'
+import AuthContextProvider from './context/AuthContext'
+
 
 function App() {
-  return <AppRouter />
+  return (
+    <AuthContextProvider>
+      <AppRouter />
+    </AuthContextProvider>
+  );
 }
 
 export default App
