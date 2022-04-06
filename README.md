@@ -1,2 +1,2 @@
 # tarot4.0
-Tarot Reading Site built with React.js
+Tarot Reading Site that allows users to save readings, built with React.js.
