@@ -24,14 +24,22 @@ export default function Homepage() {
     <Layout>
       <div className="homepage">
         {currentUser && <Heading>Welcome {currentUser.displayName}</Heading>}
-        <img onClick={()=>{history.push('/tarot-reading')}} className="home-image" src={Image} alt="crystal ball" />
+        <img
+          onClick={() => {
+            history.push("/tarot-reading");
+          }}
+          className="home-image"
+          src={Image}
+          alt="crystal ball"
+        />
         <div className="home-text">
           {!currentUser && (
             <div>
               <div>
-                <p>
-                  <Link to="register">Sign Up </Link>to Save Your Readings
-                </p>
+                <Link className="signUpLink" to="register">
+                  Sign up{" "}
+                </Link>
+                <p>to save your readings</p>
               </div>
             </div>
           )}

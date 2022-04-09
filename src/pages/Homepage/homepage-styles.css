@@ -18,3 +18,8 @@
   align-items: center;
   text-align: center;
 }
+
+.signUpLink{
+  text-decoration: underline;
+  font-weight: bolder;
+}
