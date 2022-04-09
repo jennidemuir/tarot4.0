@@ -19,7 +19,7 @@ export function Navbar() {
     <Box
       borderBottom="2px"
       borderBottomColor={useColorModeValue("gray.100", "gray.700")}
-      mb={4}
+      mb={4} px={4}
     >
       <HStack py={4} justifyContent="flex-start" w="100" mx="auto">
         <Navlink to="/" name="Tarot" size="lg" />

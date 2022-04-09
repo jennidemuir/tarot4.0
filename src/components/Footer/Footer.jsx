@@ -25,7 +25,12 @@ const Footer = () => {
       borderTopColor={useColorModeValue("gray.100", "gray.700")}
     >
       <HStack py={4} justifyContent="flex-end">
-        <div className="learnMore" onClick={()=>{history.push('/about')}}>
+        <div
+          className="learnMore"
+          onClick={() => {
+            history.push("/about");
+          }}
+        >
           <img className="footerImg" src={footerImg} alt="tarot card" />
           <div>
             <h2>Learn More</h2>
@@ -37,7 +42,7 @@ const Footer = () => {
           <a
             rel="noreferrer"
             target="_blank"
-            href="https://github.com/jennidemuir"
+            href="https://github.com/jennidemuir/tarot4.0"
           >
             <FaGithub />
           </a>
